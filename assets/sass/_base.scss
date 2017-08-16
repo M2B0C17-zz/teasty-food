@@ -1,0 +1,33 @@
+/* WELCOME */
+
+.sec-1{
+	background: url('../img/tastyfoodintro.jpg');
+	background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width:100%;
+  height: 100vh;
+  color:$white;
+		.btn{
+			background:#ff8529;
+			border-radius: 9px;
+			margin: 6px;
+			padding: 2px 109px 37px 110px;
+			font-weight: $light;
+			letter-spacing:1px;
+		}
+		.login{
+				padding-right:120px;
+			}
+		p{
+			font-weight:$light;
+			letter-spacing:1px;
+			margin:0;
+			font-size:12px;
+			text-align:center;
+		}
+		h1{
+		margin-top: 140px;
+    margin-bottom: 90px;
+		}
+}
