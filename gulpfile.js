@@ -37,7 +37,7 @@ gulp.task('style', function() {
 gulp.task('webserver', function() {
     gulp.src('../teasty-food/')
         .pipe(webserver({
-            fallback: 'index.html',
+            fallback: 'sign-up.html',
             livereload: true,
             directoryListing: false,
             open: true,

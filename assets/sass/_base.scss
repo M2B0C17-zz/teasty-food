@@ -9,7 +9,7 @@
   height: 100vh;
   color:$white;
 		.btn{
-			background:#ff8529;
+			background:$mandarina;
 			border-radius: 9px;
 			margin: 6px;
 			padding: 2px 109px 37px 110px;
@@ -19,15 +19,47 @@
 		.login{
 				padding-right:120px;
 			}
-		p{
+		a{
+			&.newbie{
 			font-weight:$light;
 			letter-spacing:1px;
 			margin:0;
 			font-size:12px;
 			text-align:center;
+			color:$white;
+			}
 		}
 		h1{
 		margin-top: 140px;
     margin-bottom: 90px;
 		}
 }
+
+/* SIGN UP */
+
+body{
+	background-color:$gris-fondo;
+		h1{
+			color:$mandarina;
+		}
+		p{
+			color:$gris-letra;
+			font-weight:$light;
+		}
+		#name,
+		#email,
+		#pass{
+			border: 1px solid $gris-letra;
+			background-color: $white;
+		}
+		.btn{
+			background:$mandarina;
+			border-radius: 9px;
+			margin: 6px;
+			padding: 2px 109px 37px 110px;
+			font-weight: $light;
+			letter-spacing:1px;
+			text-align:center;
+		}
+}
+
