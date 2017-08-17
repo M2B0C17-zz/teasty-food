@@ -72,10 +72,10 @@ var favoritoRest = JSON.parse(localStorage.getItem("favoritoRestaurant"));
                     if( comp % 2 != 0 ){
                         $("footer").empty();
                         var tarjFooter = $("<div>").attr('class', 'tarjeta-footer col s12').append('<h5 style="background-color: #ff843d; padding: 20px; text-align: center; color: white;">' + rest.restaurant.name + '<i class="material-icons" style="font-size: 23px; margin-left: 30px; color: white;">&#xE87D;</i></h5>');
-                        var nombreFooter = $("<h5>").text(nameRest);
-                        var infoFooter = $("<div>").attr('class', 'info-footer');
-                        var favFotter = $('<i class="fa fa-heart" aria-hidden="true" id="fav'+fav+'"></i>')
-                        infoFooter.append('<p>'+direcRest+'</p>'+'<p>'+costRest+'</p>'+'<p>'+ratingRest+'</p>')
+                        var nombreFooter = $("<h5>").text(nameRest).css('color', '#ff843d').css('text-align', 'center');
+                        var infoFooter = $("<div>").attr('class', 'info-footer').css('text-align', 'center');
+                        var favFotter = $('<i class="fa fa-heart" aria-hidden="true" id="fav'+fav+'"></i>').css('text-align', 'right');
+                        infoFooter.append('<p>'+direcRest+'</p>'+'<p>$'+costRest+' x2</p>'+'<p>'+ratingRest+'</p>').css('text-align', 'center');
                         tarjFooter.append(nombreFooter);
                         tarjFooter.append(infoFooter);
                         tarjFooter.append(favFotter);
@@ -101,10 +101,10 @@ var favoritoRest = JSON.parse(localStorage.getItem("favoritoRestaurant"));
                         fav++;
                     }else{
                         var tarjFooter = $("<div>").attr('class', 'tarjeta-footer').append('<h5 style="background-color: #ff843d; padding: 20px; text-align: center; color: white;">' + rest.restaurant.name + '<i class="material-icons" style="font-size: 23px; margin-left: 30px; color: white;">&#xE87D;</i></h5>');
-                        var nombreFooter = $("<h5>").text(nameRest);
-                        var infoFooter = $("<div>").attr('class', 'info-footer');
-                        var favFotter = $('<div id="fav'+fav+'"><i class="fa fa-heart" aria-hidden="true"></i></div>')
-                        infoFooter.append('<p>'+direcRest+'</p>'+'<p>'+costRest+'</p>'+'<p>'+ratingRest+'</p>')
+                        var nombreFooter = $("<h5>").text(nameRest).css('color', '#ff843d').css('text-align', 'center');
+                        var infoFooter = $("<div>").attr('class', 'info-footer').css('text-align', 'center');
+                        var favFotter = $('<div id="fav'+fav+'"><i class="fa fa-heart" aria-hidden="true"></i></div>').css('text-align', 'right');
+                        infoFooter.append('<p>'+direcRest+'</p>'+'<p>$'+costRest+' x2</p>'+'<p>'+ratingRest+'</p>').css('text-align', 'center');
                         tarjFooter.append(nombreFooter);
                         tarjFooter.append(infoFooter);
                         tarjFooter.append(favFotter);
