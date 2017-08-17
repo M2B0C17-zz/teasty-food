@@ -20326,7 +20326,7 @@ var favoritoRest = JSON.parse(localStorage.getItem("favoritoRestaurant"));
                 $( "#rest-"+cont ).click(function() {
                     if( comp % 2 != 0 ){
                         $("footer").empty();
-                        var tarjFooter = $("<div>").attr('class', 'tarjeta-footer col s12');
+                        var tarjFooter = $("<div>").attr('class', 'tarjeta-footer col s12').append('<h5 style="background-color: #ff843d; padding: 20px; text-align: center; color: white;">' + rest.restaurant.name + '<i class="material-icons" style="font-size: 23px; margin-left: 30px; color: white;">&#xE87D;</i></h5>');
                         var nombreFooter = $("<h5>").text(nameRest);
                         var infoFooter = $("<div>").attr('class', 'info-footer');
                         var favFotter = $('<i class="fa fa-heart" aria-hidden="true" id="fav'+fav+'"></i>')
@@ -20355,7 +20355,7 @@ var favoritoRest = JSON.parse(localStorage.getItem("favoritoRestaurant"));
                         comp++;
                         fav++;
                     }else{
-                        var tarjFooter = $("<div>").attr('class', 'tarjeta-footer');
+                        var tarjFooter = $("<div>").attr('class', 'tarjeta-footer').append('<h5 style="background-color: #ff843d; padding: 20px; text-align: center; color: white;">' + rest.restaurant.name + '<i class="material-icons" style="font-size: 23px; margin-left: 30px; color: white;">&#xE87D;</i></h5>');
                         var nombreFooter = $("<h5>").text(nameRest);
                         var infoFooter = $("<div>").attr('class', 'info-footer');
                         var favFotter = $('<div id="fav'+fav+'"><i class="fa fa-heart" aria-hidden="true"></i></div>')
