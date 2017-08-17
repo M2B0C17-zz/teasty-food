@@ -20257,6 +20257,11 @@ if (jQuery) {
 //alert("hola");
 var cont = 1;
 var comp = 1;
+var fav = 1;
+var favoritoRest = JSON.parse(localStorage.getItem("favoritoRestaurant"));
+	if(favoritoRest == null){
+		favoritoRest = [];
+	}
 	$.ajax({
 		url: 'https://developers.zomato.com/api/v2.1/search?entity_id=83&entity_type=city&count=15',
 		type: 'GET',
@@ -20310,18 +20315,36 @@ var comp = 1;
 					var tarjFooter = $("<div>").attr('class', 'tarjeta-footer col s12');
 					var nombreFooter = $("<h5>").text(nameRest);
 					var infoFooter = $("<div>").attr('class', 'info-footer');
-					var favFotter = $('<i class="fa fa-heart" aria-hidden="true"></i>')
+					var favFotter = $('<i class="fa fa-heart" aria-hidden="true" id="fav'+fav+'"></i>')
 					infoFooter.append('<p>'+direcRest+'</p>'+'<p>'+costRest+'</p>'+'<p>'+ratingRest+'</p>')
 	  				tarjFooter.append(nombreFooter);
 	  				tarjFooter.append(infoFooter);
 	  				tarjFooter.append(favFotter);
 	  				$("footer").append(tarjFooter);
+	  				$( "#fav"+fav ).click(function() {
+						if( favoritoRest.indexOf(rest.restaurant.name) == -1){
+							favoritoRest.push(rest.restaurant.name);
+							localStorage.setItem("favoritoRestaurant", JSON.stringify(favoritoRest));
+							var storedFavorites = JSON.parse(localStorage.getItem("favoritoRestaurant"));
+							$(this).css('color', 'red');
+							console.log(storedFavorites);
+						}
+						else if( favoritoRest.indexOf(rest.restaurant.name) != -1){
+							
+							favoritoRest.splice(favoritoRest.indexOf(rest.restaurant.name),1);
+							localStorage.setItem("favoritoRestaurant", JSON.stringify(favoritoRest));
+							var storedFavorites = JSON.parse(localStorage.getItem("favoritoRestaurant"));
+							$(this).css('color', 'black');
+							console.log(storedFavorites);
+						}
+					});
 	  				comp++;
+	  				fav++;
 				}else{
 					var tarjFooter = $("<div>").attr('class', 'tarjeta-footer');
 					var nombreFooter = $("<h5>").text(nameRest);
 					var infoFooter = $("<div>").attr('class', 'info-footer');
-					var favFotter = $('<i class="fa fa-heart" aria-hidden="true"></i>')
+					var favFotter = $('<div id="fav'+fav+'"><i class="fa fa-heart" aria-hidden="true"></i></div>')
 					infoFooter.append('<p>'+direcRest+'</p>'+'<p>'+costRest+'</p>'+'<p>'+ratingRest+'</p>')
 	  				tarjFooter.append(nombreFooter);
 	  				tarjFooter.append(infoFooter);
@@ -20329,10 +20352,28 @@ var comp = 1;
 
 	  				$(".tarjeta-footer").attr('class', 'col s6');
 	  				$("footer").append(tarjFooter);
+	  				$( "#fav"+fav ).click(function() {
+						if( favoritoRest.indexOf(rest.restaurant.name) == -1){
+							favoritoRest.push(rest.restaurant.name);
+							localStorage.setItem("favoritoRestaurant", JSON.stringify(favoritoRest));
+							var storedFavorites = JSON.parse(localStorage.getItem("favoritoRestaurant"));
+							$(this).css('color', 'red');
+							console.log(storedFavorites);
+						}
+						else if( favoritoRest.indexOf(rest.restaurant.name) != -1){
+							
+							favoritoRest.splice(favoritoRest.indexOf(rest.restaurant.name),1);
+							localStorage.setItem("favoritoRestaurant", JSON.stringify(favoritoRest));
+							var storedFavorites = JSON.parse(localStorage.getItem("favoritoRestaurant"));
+							$(this).css('color', 'black');
+							console.log(storedFavorites);
+						}
+					});
 	  				comp++;
+	  				fav++;
 				}
-				
 			});
+
 			cont++;
 			
 		});
