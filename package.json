@@ -20,5 +20,13 @@
   "dependencies": {
     "jquery": "^3.2.1",
     "materialize-css": "^0.100.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/M2B0C17/teasty-food.git"
+  },
+  "bugs": {
+    "url": "https://github.com/M2B0C17/teasty-food/issues"
+  },
+  "homepage": "https://github.com/M2B0C17/teasty-food#readme"
 }
