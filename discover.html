@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="dist/css/style.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#!" class="brand-logo">Logo</a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Search</a></li>
+                <li><a href="#">Discovery</a></li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Search</a></li>
+                <li><a href="#">Discovery</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="selection">
+        <div class="col s12">
+            <div class="dropdown">
+                <select>Cuisine</select>
+                <div id="myDropdown" class="dropdown-content">
+                    <li>
+                        <option value="" disabled selected>Cuisine</option>
+                    </li>
+                    <ul>
+
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mapa">
+        <div id="map"></div>
+    </section>
+
+
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5bGReTZRr7EVyPPFKyeKQ3Gusfb_evKI&callback=initMap"></script>
+    <script src="dist/js/script.js"></script>
+</body>
+
+</html>
