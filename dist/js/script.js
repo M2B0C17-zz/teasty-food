@@ -20254,7 +20254,11 @@ if (jQuery) {
 })(jQuery);
 
 
-//alert("hola");
+//Activacion del select 
+$(document).ready(function() {
+    $('select').material_select();
+  });
+
 var cont = 1;
 var comp = 1;
 var fav = 1;
@@ -20262,12 +20266,14 @@ var favoritoRest = JSON.parse(localStorage.getItem("favoritoRestaurant"));
 	if(favoritoRest == null){
 		favoritoRest = [];
 	}
+
+$('.selectStyles').on('change', function() {
+	var cityCode = this.value;
+	$(".search-rest").empty();
 	$.ajax({
-		url: 'https://developers.zomato.com/api/v2.1/search?entity_id=83&entity_type=city&count=15',
+		url: 'https://developers.zomato.com/api/v2.1/search?entity_id='+cityCode+'&entity_type=city&count=15',
 		type: 'GET',
 		dataType: 'json',
-		//entity_id: '83',
-		//count: '10',
 		headers: {'user-key' : '68caa26ae70ec571a32d410254a6c631'}
 		
 	})
@@ -20292,12 +20298,17 @@ var favoritoRest = JSON.parse(localStorage.getItem("favoritoRestaurant"));
 			var ratingRest = rest.restaurant.user_rating.aggregate_rating;
 			var costRest = rest.restaurant.average_cost_for_two;
 			var imgRest = rest.restaurant.featured_image;
-			var blurryRest = "https://1sqaho2rc10k4c3dsm3pzthu-wpengine.netdna-ssl.com/wp-content/uploads/2015/09/Blurry-Restaurant1.jpg";
 			
 			var tarjeta = $("<div>").attr('class', 'tarjeta col s4');
 				tarjeta.attr('id', 'rest-'+ cont);
-			var iamgen = $("<img>").attr('src',imgRest );
 
+			if(imgRest == ""){
+				var iamgen = $("<img>").attr('src','dist/img/Blurry-Restaurant2.jpg' );
+					iamgen.attr('class', 'imgblurry');
+			}else{
+				var iamgen = $("<img>").attr('src',imgRest );
+			}
+			
 			var infoTarje = $("<div>").attr('class', 'info-tarjeta');
 			var nombretarje = $("<p>").text(nameRest);
 			var comunaTarje = $("<p>").text(comunaRest);
@@ -20378,3 +20389,4 @@ var favoritoRest = JSON.parse(localStorage.getItem("favoritoRestaurant"));
 			
 		});
 	}
+});
