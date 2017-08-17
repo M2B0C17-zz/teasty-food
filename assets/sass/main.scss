@@ -1,0 +1,34 @@
+body{
+	nav{
+	background-color: $color_fondo_menu;
+	}
+
+	.elementosApi{
+		#body-search{
+			img{
+				width: 100%;
+				height: auto;
+			}
+			.info-tarjeta{
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+			}
+			footer {
+				position:fixed;
+				left:0px;
+				bottom:0px;
+				width:100%;
+				background-color: white;
+			}
+		}
+	}
+
+	.secSelect{
+		background-color: $color_fondo_gris;
+		.selectStyles{
+
+		}
+	}
+
+}
