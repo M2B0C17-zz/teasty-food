@@ -1,0 +1,31 @@
+.paddingBottom{
+	margin-bottom: 30px;
+}
+
+.seclections{
+	padding-top: 50px;
+}
+
+.elementosApi{
+	#body-search{
+		img{
+			width: 100%;
+			height: auto;
+		}
+		.info-tarjeta{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+		.conainer{
+			z-index: -90;
+		}
+		footer {
+			position:fixed;
+			left:0px;
+			bottom:0px;
+			width:100%;
+			background-color: white;
+		}
+	}
+}
