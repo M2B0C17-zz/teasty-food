@@ -1,9 +1,4 @@
-body{
-	nav{
-	background-color: $color_fondo_menu;
-	}
-
-	.elementosApi{
+.elementosApi{
 		#body-search{
 			img{
 				width: 100%;
@@ -21,14 +16,9 @@ body{
 				width:100%;
 				background-color: white;
 			}
+			.movers{
+				display: absolute;
+			}
 		}
 	}
 
-	.secSelect{
-		background-color: $color_fondo_gris;
-		.selectStyles{
-
-		}
-	}
-
-}
