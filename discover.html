@@ -30,24 +30,20 @@
     <section class="selection">
         <div class="col s12">
             <div class="dropdown">
-                <select>Cuisine</select>
+                <select>Cuisine
                 <div id="myDropdown" class="dropdown-content">
                     <li>
                         <option value="" disabled selected>Cuisine</option>
                     </li>
-                    <ul>
-
-
-
-                    </ul>
                 </div>
+            </select>
             </div>
         </div>
     </section>
 
-    <div id="map" style="width: 500px; height: 400px;"></div>
+    <div id="map"></div>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7x7meW94BqhiGXypONeItytayIb9BRZk&callback=initMap&libraries=places"></script>
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7x7meW94BqhiGXypONeItytayIb9BRZk&libraries=places&callback=initMap" async defer></script>
     <script src="dist/js/script.js"></script>
 </body>
 
