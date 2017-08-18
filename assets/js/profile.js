@@ -34,6 +34,8 @@ function handleFileSelect(evt) {
 document.getElementById('files').addEventListener('change', handleFileSelect, false);
 
 if(localStorage.img) { 
-    var span = document.getElementById('list');
-    span.innerHTML = '<img class="prof-pic" src="'+ localStorage.img +'" title="test"/>';
+    var fotouno = document.getElementById('list');
+    var fotodos = document.getElementById('user-img');
+    fotouno.innerHTML = '<img class="prof-pic" src="'+ localStorage.img +'" title="test"/>';
+    fotodos.innerHTML = '<img class="prof-pic" src="'+ localStorage.img +'" title="test"/>';
 }
