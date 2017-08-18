@@ -20270,7 +20270,7 @@ var laCuisine = $.ajax({
                 var cuisineId = estilos.cuisine.cuisine_id; //devuelve 57 ids
                 //console.log(cuisine);
                 $(".dropdown-content").append(`<li>
-                <option class="cuisine" value="${contador}" id="${cuisineId}">${cuisine}</option>
+                <option class="cuisine" value="${cuisineId}">${cuisine}</option>
                 </li>`);
 
                 contador++;
@@ -20340,8 +20340,6 @@ function initMap() {
         }
     }
 };
-
-
 
 $('select').material_select();
 
