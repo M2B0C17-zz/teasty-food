@@ -41,7 +41,7 @@ gulp.task('webserver', function() {
             livereload: true,
             directoryListing: false,
             open: true,
-            port: 8081
+            port: 8008
         }));
 });
 
@@ -62,4 +62,3 @@ gulp.task('watchjs', function() {
  */
 
 gulp.task('default', ['script', 'style', 'webserver', 'watch', 'watchjs']);
-

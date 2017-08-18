@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Tasty Food</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="dist/css/style.min.css" rel="stylesheet">
+</head>
+
+<body>
+<nav>
+    <div class="nav-wrapper">
+        <a href="#" class="brand-logo center">Discover</a>
+        <ul id="slide-out" class="side-nav">
+            <li>
+            <div class="user-view">
+            <div class="background">
+                <img src="dist/img/menu-bg.png">
+            </div>
+            <a href="#!user" id="user-img"></a>
+            <a href="#!name"><span id="name_side" class="white-text name">John Doe</span></a>
+            <a href="#!email"><span id="email_side" class="white-text email">jdandturk@gmail.com</span></a>
+            </div>
+            </li>
+            <li><a class="waves-effect" href="search.html"><i class="material-icons">search</i>Search</a></li>
+            <li><a class="waves-effect" href="discover.html"><i class="material-icons">new_releases</i>Discover</a></li>
+            <li><a class="waves-effect" href="profile.html"><i class="material-icons">person</i>Profile</a></li>
+        </ul>
+        <a href="#" data-activates="slide-out" class="button-collapse right"><i class="material-icons">menu</i></a>
+    </div>
+</nav>
+
+    <section class="selection">
+        <div class="col s12">
+            <div class="dropdown">
+                <select>Cuisine
+                <div id="myDropdown" class="dropdown-content">
+                    <li>
+                        <option value="" disabled selected>Cuisine</option>
+                    </li>
+                </div>
+            </select>
+            </div>
+        </div>
+    </section>
+
+    <div id="map"></div>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7x7meW94BqhiGXypONeItytayIb9BRZk&callback=initMap&libraries=places"></script>
+    <script src="dist/js/mapa.js"></script>
+    <script src="dist/js/script.js"></script>
+</body>
+
+</html>

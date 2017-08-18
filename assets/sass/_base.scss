@@ -159,3 +159,8 @@ textarea.materialize-textarea:focus:not([readonly]){
   -webkit-transform: scaleY(0);
   transform: scaleY(0);
 }
+
+#map {
+    height: 500px;
+    width: 100%;
+}
