@@ -68,12 +68,12 @@ body{
 		.btn{
 			background:$mandarina;
 			border-radius: 9px;
-			margin: 6px;
-			margin-top: -12px;
-			padding: 2px 106px 42px 92px;
+			margin: -12px 6px 6px;
+			padding: 0px 20px;
 			font-weight: $light;
 			letter-spacing:3px;
 			text-align:center;
+			display: block;
 		}
 }
 
