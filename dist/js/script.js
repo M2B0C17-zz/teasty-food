@@ -20258,6 +20258,7 @@ if (jQuery) {
 //Activacion del select 
 
 //alert("hola");
+
 $(document).ready(function() {
     $('select').material_select();
   });
@@ -20331,7 +20332,7 @@ $('.selectStyles').on('change', function() {
 					var nombreFooter = $("<h5>").text(nameRest);
 					var infoFooter = $("<div>").attr('class', 'info-footer');
 					var favFotter = $('<i class="fa fa-heart" aria-hidden="true" id="fav'+fav+'"></i>')
-					infoFooter.append('<p>'+direcRest+'</p>'+'<p>'+costRest+'</p>'+'<p>'+ratingRest+'</p>')
+					infoFooter.append('<p>'+direcRest+'</p>'+'<p>Precio para dos: '+costRest+'</p>'+'<p> Rating: '+ratingRest+'/5</p>')
 	  				tarjFooter.append(nombreFooter);
 	  				tarjFooter.append(infoFooter);
 	  				tarjFooter.append(favFotter);
@@ -20360,7 +20361,7 @@ $('.selectStyles').on('change', function() {
 					var nombreFooter = $("<h5>").text(nameRest);
 					var infoFooter = $("<div>").attr('class', 'info-footer');
 					var favFotter = $('<div id="fav'+fav+'"><i class="fa fa-heart" aria-hidden="true"></i></div>')
-					infoFooter.append('<p>'+direcRest+'</p>'+'<p>'+costRest+'</p>'+'<p>'+ratingRest+'</p>')
+					infoFooter.append('<p>'+direcRest+'</p>'+'<p>Precio para dos: '+costRest+'</p>'+'<p> Rating: '+ratingRest+'/5</p>')
 	  				tarjFooter.append(nombreFooter);
 	  				tarjFooter.append(infoFooter);
 	  				tarjFooter.append(favFotter);
@@ -20393,7 +20394,8 @@ $('.selectStyles').on('change', function() {
 			
 		});
 	}
-
+});
+/*
     if(favoritoRest == null){
         favoritoRest = [];
     }
@@ -20525,6 +20527,7 @@ $('.selectStyles').on('change', function() {
             });
         }
     });
+    */
 
 
 // Activación del Select

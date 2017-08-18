@@ -8,6 +8,7 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
+		background-color: #ff843d;
 	}
 	footer {
 		position:fixed;
@@ -15,6 +16,13 @@
 		bottom:0px;
 		width:100%;
 		background-color: white;
+		margin: 0;
+	}
+	i{
+		font-size: 30px;
+	}
+	.tarjeta{
+		margin-bottom: 10px;
 	}
 }
 
@@ -28,15 +36,20 @@
 				display: flex;
 				flex-direction: row;
 				justify-content: space-between;
+				background-color: #ff843d;
 			}
 			footer {
 				position:fixed;
 				left:0px;
 				bottom:0px;
 				width:100%;
+				margin: 0;
 			}
 			.movers{
 				display: absolute;
+			}
+			i{
+				font-size: 30px;
 			}
 		}
 	}
