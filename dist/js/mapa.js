@@ -1,47 +1,11 @@
-// API key Zomato 667597f60811ea00b9750208b4a9755b
-var laCuisine = $.ajax({
-        url: 'https://developers.zomato.com/api/v2.1/cuisines?city_id=83',
-        type: 'GET',
-        dataType: 'json',
-        headers: { 'user-key': '667597f60811ea00b9750208b4a9755b' },
-
-    })
-    .done(function(val) {
-        //console.log("success");
-        //console.log(val)
-        val.cuisines.forEach(function(estilos) {
-                //console.log("cuisine -> ", estilos.cuisine.cuisine_name);
-                var cuisine = estilos.cuisine.cuisine_name; //devuelve 57 tipos de cuisine
-                var cuisineId = estilos.cuisine.cuisine_id; //devuelve 57 ids
-                //console.log(cuisine);
-                $(".dropdown-content").append(`<li>
-                <option class="cuisine" value="${cuisineId}">${cuisine}</option>
-                </li>`);
-
-                contador++;
-            })
-            .fail(function() {
-                //console.log("error");
-            })
-            .always(function() {
-                // console.log("yupiii!!!");
-            });
-
-        var contador = 1;
-
-    });
-
-//datos mapa
-
-/*
 function initMap() {
     $.ajax({
-            url: 'https://developers.zomato.com/api/v2.1/search?entity_id=83&entity_type=city&count=20&cuisines=' + laCuisine,
-            type: 'GET',
-            dataType: 'json',
-            headers: { 'user-key': '68caa26ae70ec571a32d410254a6c631' }
-
-        })
+        url: 'https://developers.zomato.com/api/v2.1/search?entity_id=83&entity_type=city&count=15',
+        type: 'GET',
+        dataType: 'json',
+        headers: {'user-key' : '68caa26ae70ec571a32d410254a6c631'}
+        
+    })
         .done(function(val) {
             console.log("success");
             console.log(val);
@@ -85,8 +49,3 @@ function initMap() {
         }
     }
 };
-*/
-
-$('select').material_select();
-
-$(".button-collapse").sideNav();
