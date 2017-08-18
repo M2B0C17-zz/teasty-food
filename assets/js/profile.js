@@ -1,8 +1,3 @@
-$(document).ready(function() {
-    // Initialize collapse button
-    $(".button-collapse").sideNav();
-});
-
 function handleFileSelect(evt) {
     var files = evt.target.files; // FileList object
 
