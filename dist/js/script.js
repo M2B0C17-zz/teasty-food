@@ -20262,71 +20262,48 @@ $(document).ready(function(){
 
 
 
-function handleFileSelect(evt) {
-    var files = evt.target.files; // FileList object
-
-    // Loop through the FileList and render image files as thumbnails.
-    for (var i = 0, f; f = files[i]; i++) {
-        // Only process image files.
-        if (!f.type.match('image.*')) {
-            continue;
-        }
-
-        var reader = new FileReader();
-
-        // Closure to capture the file information.
-        reader.onload = (function(theFile) {
-        return function(e) {
-            // Render thumbnail.
-            var span = document.getElementById('list');
-            span.innerHTML = '<img class="prof-pic" src="' + e.target.result + '" title="' + escape(theFile.name) + '"/>';
-
-            localStorage.setItem('img', e.target.result);
-            };
-        })(f);
-
-        // Read in the image file as a data URL.
-        reader.readAsDataURL(f);
+$(document).ready(function() {
+    if(localStorage.user_img) {
+        $('#list').html('<img class="prof-pic" src="'+ localStorage.user_img +'" title="test"/>');
+        $('#user-img').html('<img class="prof-pic" src="'+ localStorage.user_img +'" title="test"/>');
     }
-}
-
-document.getElementById('files').addEventListener('change', handleFileSelect, false);
-
-if(localStorage.img) { 
-    var fotouno = document.getElementById('list');
-    var fotodos = document.getElementById('user-img');
-    fotouno.innerHTML = '<img class="prof-pic" src="'+ localStorage.img +'" title="test"/>';
-    fotodos.innerHTML = '<img class="prof-pic" src="'+ localStorage.img +'" title="test"/>';
-}
+    if(localStorage.nameTasty) {
+        $('#name').html(localStorage.nameTasty);
+        $('#name_side').html(localStorage.nameTasty);
+    }
+    if(localStorage.emailTasty) {
+        $('#email').html(localStorage.emailTasty);
+        $('#email_side').html(localStorage.emailTasty);
+    }
+});
 $(document).ready(function() {
     $(".malo").hide();
-    $("#sign-up").on("click", function(e){
+    $("#sign-up").click(function(e) {
         var name = $("#name").val();
         var email = $("#email").val();
         var pass = $("#pass").val();
-        if(name == ""){
+        if (name == ""){
             $("#malo1").show();
-        }else{
-         $("#malo1").hide();
-        }
-        if(email.indexOf('@') == -1){
-            
-            $("#malo2").show();
-        }else{
-            
-            $("#malo2").hide();
-        }
-        if(pass.length < 6){
-            $("#malo3").show();
-        }else{
-            $("#malo3").hide();
-        }
-        
-        if(name != "" && email.indexOf('@') != -1 && pass >= 6){
+        } else {
+            $("#malo1").hide();
+            console.log(name);
             localStorage.setItem("nameTasty", name);
+            e.preventDefault();
+        }
+        if (email.indexOf('@') == -1){
+            $("#malo2").show();
+        } else {
+            $("#malo2").hide();
+            console.log(email);
             localStorage.setItem("emailTasty", email);
+            e.preventDefault();
+        }
+        if (pass.length < 6){
+            $("#malo3").show();
+        } else {
+            $("#malo3").hide();
+            console.log(pass);
             localStorage.setItem("passTasty", pass);
-        }else{
             e.preventDefault();
         }
     });
