@@ -20360,6 +20360,14 @@ $(document).ready(function() {
         $('#email').html(localStorage.emailTasty);
         $('#email_side').html(localStorage.emailTasty);
     }
+
+    var storedFavorites = JSON.parse(localStorage.getItem("favoritoRestaurant")); 
+
+    storedFavorites.forEach(function(e){
+        var favorito = $("<div>").attr('class', 'favorito');
+        favorito.text(e);
+        $("#fav-list").append(favorito);
+    })
 });
 
 //Activacion del select 

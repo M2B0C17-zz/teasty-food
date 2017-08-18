@@ -164,3 +164,11 @@ textarea.materialize-textarea:focus:not([readonly]){
     height: 500px;
     width: 100%;
 }
+.favorito{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	padding: 20px;
+	background-color: #ff8529;
+	margin: 15px;
+}
