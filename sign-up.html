@@ -14,25 +14,7 @@
 </head>
 <body>
 	<!-- SECCION 2: SIGN UP -->
-<!-- NAVBAR -->
-	<nav>
-        <div class="nav-wrapper">
-            <!-- <a href="#!" class="brand-logo">Logo</a> -->
-            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">Search</a></li>
-                <li><a href="#">Discovery</a></li>
-            </ul>
-            <ul class="side-nav" id="mobile-demo">
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">Search</a></li>
-                <li><a href="#">Discovery</a></li>
-            </ul>
-        </div>
-    </nav>
-<!-- FIN NAVBAR -->
-	<section class="sec-2" id="sign-up">
+	<section class="sec-2">
 		<div class="container-fluid center">
 			<div class="row">
 				<div class="col s12">
@@ -44,18 +26,21 @@
 				<div class="row">
 					<div class="input-field col s12">
 						<input placeholder="Your Name" id="name" type="text" class="validate">
+						<p class="malo" id="malo1">Ingrese su nombre</p>
 					</div>
 					<div class="input-field col s12">
 						<input placeholder="Your Email" id="email" type="email" class="validate">
+						<p class="malo" id="malo2">Ingrese un email válido</p>
 					</div>
 					<div class="input-field col s12">
 						<input placeholder="Password" id="pass" type="password" class="validate">
+						<p class="malo" id="malo3">La contraseña debe tener más de 6 caracteres</p>
 					</div>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col s12">
-					<a class="waves-effect waves-light btn btn-signup " href="#" >CREATE ACCOUNT</a>
+					<a class="waves-effect waves-light btn btn-signup" id="sign-up" href="#" >CREATE ACCOUNT</a>
 				</div>
 			</div>
 		</div>
